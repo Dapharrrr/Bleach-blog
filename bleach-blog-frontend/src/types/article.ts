@@ -46,6 +46,32 @@ export interface ContentBlock {
   }>;
 }
 
+export interface Author {
+  id: number;
+  documentId: string;
+  username: string;
+  email: string;
+  provider: string;
+  confirmed: boolean;
+  blocked: boolean;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+}
+
+export interface Comment {
+  id: number;
+  documentId: string;
+  content: string;
+  authorName: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  article?: {
+    data: Article;
+  };
+}
+
 export interface Article {
   id: number;
   documentId: string;
@@ -57,10 +83,33 @@ export interface Article {
   publishedAt: string;
   authorName: string;
   coverImage: CoverImage;
+  author?: {
+    data: Author;
+  };
+  comments?: {
+    data: Comment[];
+  };
 }
 
 export interface ArticlesResponse {
   data: Article[];
+  meta: {
+    pagination: {
+      page: number;
+      pageSize: number;
+      pageCount: number;
+      total: number;
+    };
+  };
+}
+
+export interface ArticleResponse {
+  data: Article;
+  meta: {};
+}
+
+export interface CommentsResponse {
+  data: Comment[];
   meta: {
     pagination: {
       page: number;

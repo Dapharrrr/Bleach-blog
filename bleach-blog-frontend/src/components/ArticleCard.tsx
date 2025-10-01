@@ -27,7 +27,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
   };
 
   return (
-    <Link href={`/articles/${article.documentId}`} className={styles.card}>
+    <Link href={`/articles/${article.slug}`} className={styles.card}>
       <div className={styles.imageContainer}>
         {article.coverImage && (
           <Image
