@@ -19,7 +19,7 @@ Ce repository contient l'application complète Bleach Blog avec :
 ## 🚀 Démarrage rapide
 
 ### Prérequis
-- Node.js (v18 ou plus)
+- Node.js (v18 ou <=22.xx.xx)
 - npm ou yarn
 
 ### Installation
@@ -27,7 +27,7 @@ Ce repository contient l'application complète Bleach Blog avec :
 1. **Clone le repository**
    ```bash
    git clone <votre-repo-url>
-   cd bleach-blog-project
+   cd Bleach-blog
    ```
 
 2. **Backend (Strapi)**
@@ -50,7 +50,6 @@ Ce repository contient l'application complète Bleach Blog avec :
 
 ### Backend
 - **Strapi** - CMS headless
-- **SQLite** - Base de données (dev)
 - **Node.js** - Runtime
 
 ### Frontend
